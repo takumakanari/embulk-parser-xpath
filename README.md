@@ -25,8 +25,8 @@ parser:
     "si" : "http://www.w3schools.com/rdf/"
 ```
 
-- **type**: specify this plugin as `xml`
-- **root**: root property to start fetching each entries, specify in *path/to/node* style, required
+- **type**: specify this plugin as `xpath`
+- **root**: root property to start fetching each entries, specify in xpath style, required
 - **schema**: specify the attribute of table and data type, required
 - **namespaces**: xml namespaces
 
