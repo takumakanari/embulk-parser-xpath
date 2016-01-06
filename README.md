@@ -19,7 +19,7 @@ parser:
   root: /rdf:RDF
   schema:
     - {name: //si:title[1], type: string}
-    - {name: //si:author, type: string}
+    - {name: //si:author[1], type: string}
   namespaces:
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     "si" : "http://www.w3schools.com/rdf/"
