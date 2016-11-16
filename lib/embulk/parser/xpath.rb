@@ -65,13 +65,12 @@ module Embulk
         items = doc.xpath(@root, @namespaces)
         items.each do |item|
           @current_data = new_map_by_schema
-         
+
           @schema.each do |key,value|
-            doc.xpath(key, @namespaces).each do |item|
-              @current_data[key] = item.text
-            end
+            es = doc.xpath(key, @namespaces)
+            @current_data[key] = es.empty? ? nil : es.text
           end
-          
+
           @on_new_record.call(@current_data.map{|k, v| v})
         end
       end
