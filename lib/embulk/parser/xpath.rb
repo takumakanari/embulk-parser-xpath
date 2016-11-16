@@ -15,7 +15,7 @@ module Embulk
         task = {
           :schema => schema_serialized,
           :root => config.param("root", :string),
-          :namespaces => config.param("namespaces", :hash)
+          :namespaces => config.param("namespaces", :hash, :default => {})
         }
         columns = schema.each_with_index.map do |c, i|
           Column.new(i, c["name"], c["type"].to_sym)
